@@ -1,0 +1,18 @@
+service:
+  name: you-function-better
+
+plugins:
+  - serverless-webpack
+  - serverless-offline
+
+provider:
+  name: aws
+  runtime: nodejs8.10
+
+functions:
+  painAway:
+    handler: src/handlers/PainAway.hello
+    events:
+      - http:
+          method: get
+          path: /painAway
