@@ -1,6 +1,4 @@
-import { MockInstance } from 'jest';
-
-export const getMock : MockInstance = jest.fn();
+export const getMock = jest.fn();
 
 export default {
   get: getMock,

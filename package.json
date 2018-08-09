@@ -25,7 +25,7 @@
     ]
   },
   "dependencies": {
-    "aws-sdk": "^2.288.0",
+    "aws-sdk": "^2.289.0",
     "axios": "^0.18.0",
     "base-64": "^0.1.0",
     "source-map-support": "^0.5.0"
@@ -37,6 +37,7 @@
     "babel-core": "^6.26.3",
     "babel-jest": "^23.4.2",
     "jest": "^23.4.2",
+    "serverless-dotenv-plugin": "^1.2.0",
     "serverless-offline": "^3.25.7",
     "serverless-webpack": "^4.0.0",
     "ts-jest": "^23.1.3",
