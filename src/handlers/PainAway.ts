@@ -1,14 +1,15 @@
 import { APIGatewayEvent, Context } from 'aws-lambda';
 import { Handler, Response } from '../@types/Handler';
+import axios from 'axios';
+import { AxiosResponse } from 'axios';
 
-export const hello: Handler = (event: APIGatewayEvent, context: Context) => {
-  const response : Response = {
+const catEndpoint = 'http://thecatapi.com/api/images/get';
+
+export const hello: Handler = async (event: APIGatewayEvent, context: Context) => {
+  const catPic : AxiosResponse = await axios.get(`${catEndpoint}?format=html`);
+
+  return {
     statusCode: 200,
-    body: JSON.stringify({
-      message: 'Go Serverless Webpack (Typescript) v1.0! Your function executed successfully!',
-      input: event,
-    }),
+    body: JSON.stringify(catPic.data),
   };
-
-  return response;
 }

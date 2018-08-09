@@ -5,4 +5,4 @@ export type Response = {
   body: string,
 }
 
-export type Handler = (event: any, context: Context, callback?: Callback) => Response;
+export type Handler = (event: any, context: Context, callback?: Callback) => Promise<Response>;
